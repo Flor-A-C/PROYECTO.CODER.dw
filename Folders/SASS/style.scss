@@ -69,6 +69,7 @@ section{
 }
 
 .btn{
+    @extend %btn;
     margin-top: 1rem;
     display: inline-block;
     padding:1rem 3rem;
@@ -107,6 +108,7 @@ section{
     }
 
     .btn{
+        @extend %btn;
         margin-top: 0;
     }
 }
@@ -207,6 +209,7 @@ section{
         }
 
         .btn{
+            @extend %btn;
             flex: 1 1 15rem;
         }
     }
