@@ -1321,33 +1321,34 @@ opacity: 0;
 /*=========== CORTOS ===========*/
 
 /*=========== SERIES ===========*/
-/*rcane*/
-.bannerarcane{
+/* ====== AMAZON ====== */
+/* the boys */
+.bannertheboys{
   position: relative;
   width: 100%;
   min-height: 100vh;
   padding: 0 100px;
-  background: url(/Folders/img/fondos/Animacion/Series/Captura\ de\ pantalla\ 2021-12-11\ 183804.jpg);
+  background: url(/Folders/img/Fondos/SeriesTV/Amazon/4VFIL7NZRVE3TILEGAL56OXU3I.jpg);
   background-position: center;
   background-size: cover;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.bannerarcane .contentarcane{
+.bannertheboys .contentTBOYS{
   max-width: 550px;
 }
-.bannerarcane .contentarcane h2{
+.bannertheboys .contentTBOYS h2{
   text-transform: uppercase;
   font-weight: 400;
   font-size: 2.5em;
   letter-spacing: 0.1em;
   color: #fff;
 }
-.bannerarcane .contentarcane h2 span{
+.bannertheboys .contentTBOYS h2 span{
   font-weight: 800;
 }
-.bannerarcane .contentarcane p{
+.bannertheboys .contentTBOYS p{
   font-size: 1.2em;
   font-weight: 300;
   letter-spacing: 0.02em;
@@ -1392,13 +1393,13 @@ opacity: 0;
   transform: scale(0.6);
 
 }
-.slidearcane{
+.slideTBoys{
   position: absolute;
   bottom: 50px;
   left: calc(50% - 20px / 2);
   width: 250px;
   height: 150px;
-  background: url(/Folders/img/poster/Arcane_-_Poster.jpg);
+  background: url(/Folders/img/Poster/The_Boys_Serie_de_TV-329113306-large.jpg);
   background-size: cover;
   cursor: pointer;
   animation: animate 25s linear infinite;
@@ -1414,52 +1415,21 @@ opacity: 0;
       background-position: bottom;
   }
 }
-.trailerarcane{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100000;
-  background: rgba(0, 0, 0, 0.95);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-backdrop-filter: blur(20px);
-visibility:hidden;
-opacity: 0;
-}
-.trailerarcane .active{
-  visibility: visible;
-  opacity: 1;
-}
-.trailerarcane video{
-  max-width: 900px;
-  outline: none;
-}
-.trailerarcane .close{
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  cursor: pointer;
-  filter: invert(1);
-  max-width: 32px;
-}
+
 @media (max-width: 991px){  
 
-.bannerarcane{
+.bannertheboys{
   padding: 100px 50px;
 }
-.bannerarcane .contentarcane h2{
+.bannertheboys .contentTBOYS h2{
   font-weight: 400;
   font-size: 2em;
   letter-spacing: 0.05em;
 }
-.bannerarcane .contentarcane p{
+.bannertheboys .contentTBOYS p{
   font-size: 1em;
 }
-.slidearcane{
+.slideTBoys{
   position: relative;
   bottom: initial;
   left: 0;
@@ -1482,40 +1452,36 @@ opacity: 0;
   list-style: none;
   margin: 0 5px;
 }
-.trailerarcane video{
-  max-width: 90%;
-  outline: none;
 }
-}
-/*hanako*/
-
-/*desencanto*/
-.bannerdesencanto{
+/*the boys*/
+/* ====== AMAZON ====== */
+/* ====== HBO ====== */
+.bannereuphoria{
   position: relative;
   width: 100%;
   min-height: 100vh;
   padding: 0 100px;
-  background: url(/Folders/img/fondos/Animacion/Series/1535719781531.jpg);
+  background: url(/Folders/img/Fondos/SeriesTV/HBO/4dc23d8dadeb4f2f9a434b76ae1d88d1.jpg);
   background-position: center;
   background-size: cover;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.bannerdesencanto .contentdesencanto{
+.bannereuphoria .contenteuphoria{
   max-width: 550px;
 }
-.bannerdesencanto .contentdesencanto h2{
+.bannereuphoria .contenteuphoria h2{
   text-transform: uppercase;
   font-weight: 400;
   font-size: 2.5em;
   letter-spacing: 0.1em;
   color: #fff;
 }
-.bannerdesencanto .contentdesencanto h2 span{
+.bannereuphoria .contenteuphoria h2 span{
   font-weight: 800;
 }
-.bannerdesencanto .contentdesencanto p{
+.bannereuphoria .contenteuphoria p{
   font-size: 1.2em;
   font-weight: 300;
   letter-spacing: 0.02em;
@@ -1560,13 +1526,13 @@ opacity: 0;
   transform: scale(0.6);
 
 }
-.slidedesencanto{
+.slideeuphoria{
   position: absolute;
   bottom: 50px;
   left: calc(50% - 20px / 2);
   width: 250px;
   height: 150px;
-  background: url(/Folders/img/poster/6f8cd2ff0f9ea69d6e2736b0111f1fb6.jpg);
+  background: url(/Folders/img/Poster/4123858.jpg);
   background-size: cover;
   cursor: pointer;
   animation: animate 25s linear infinite;
@@ -1582,52 +1548,21 @@ opacity: 0;
       background-position: bottom;
   }
 }
-.trailerdesencanto{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100000;
-  background: rgba(0, 0, 0, 0.95);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-backdrop-filter: blur(20px);
-visibility:hidden;
-opacity: 0;
-}
-.trailerdesencanto .active{
-  visibility: visible;
-  opacity: 1;
-}
-.trailerdesencanto video{
-  max-width: 900px;
-  outline: none;
-}
-.trailerdesencanto .close{
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  cursor: pointer;
-  filter: invert(1);
-  max-width: 32px;
-}
+
 @media (max-width: 991px){  
 
-.bannerdesencanto{
+.bannereuphoria{
   padding: 100px 50px;
 }
-.bannerdesencanto .contentdesencanto h2{
+.bannereuphoria .contenteuphoria h2{
   font-weight: 400;
   font-size: 2em;
   letter-spacing: 0.05em;
 }
-.bannerdesencanto .contentdesencanto p{
+.bannereuphoria .contenteuphoria p{
   font-size: 1em;
 }
-.slidedesencanto{
+.slideeuphoria{
   position: relative;
   bottom: initial;
   left: 0;
@@ -1650,12 +1585,405 @@ opacity: 0;
   list-style: none;
   margin: 0 5px;
 }
-.trailerdesencanto video{
-  max-width: 90%;
-  outline: none;
+}
+/* GOT */
+.bannerGOT{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/SeriesTV/HBO/xd.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bannerGOT .contentGOT{
+  max-width: 550px;
+}
+.bannerGOT .contentGOT h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.bannerGOT .contentGOT h2 span{
+  font-weight: 800;
+}
+.bannerGOT .contentGOT p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slideGOT{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/4123858.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.bannerGOT{
+  padding: 100px 50px;
+}
+.bannerGOT .contentGOT h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.bannerGOT .contentGOT p{
+  font-size: 1em;
+}
+.slideGOT{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
 }
 }
-/*DESECCANTO*/
+/*GOT */
+/* ====== HBO ====== */
+/* ====== NETFLIX ====== */
+/* lucifer */
+.bannerCOBRA{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/SeriesTV/Netflix/89c047118988599.60941644d8953\(1\).jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bannerCOBRA .contentCOBRA{
+  max-width: 550px;
+}
+.bannerCOBRA .contentCOBRA h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.bannerCOBRA .contentCOBRA h2 span{
+  font-weight: 800;
+}
+.bannerCOBRA .contentCOBRA p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slideCOBRA{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/4123858.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.bannerCOBRA{
+  padding: 100px 50px;
+}
+.bannerCOBRA .contentCOBRA h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.bannerCOBRA .contentCOBRA p{
+  font-size: 1em;
+}
+.slideCOBRA{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* cobra */
+.bannerLUCI{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/SeriesTV/Netflix/9f864d111465477.6002203db0b6b.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bannerLUCI .contentLUCI{
+  max-width: 550px;
+}
+.bannerLUCI .contentLUCI h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.bannerLUCI .contentLUCI h2 span{
+  font-weight: 800;
+}
+.bannerLUCI .contentLUCI p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slideLUCI{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/4123858.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.bannerLUCI{
+  padding: 100px 50px;
+}
+.bannerLUCI .contentLUCI h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.bannerLUCI .contentLUCI p{
+  font-size: 1em;
+}
+.slideLUCI{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== NETFLIX ====== */
+
 /*=========== SERIES ===========*/
 
 /*=========== PELICULAS ===========*/
@@ -1752,38 +2080,7 @@ opacity: 0;
         background-position: bottom;
     }
   }
-  .trailerarcane{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerarcane .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerarcane video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerarcane .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
+ 
   @media (max-width: 991px){  
   
   .bannerarcane{
