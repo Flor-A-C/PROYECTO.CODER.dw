@@ -1,0 +1,1 @@
+﻿agregue el meta description con una breve introducción, un keywords con palabras claves, un robots, aparte está el viewport y UTF8. utilice un mixin y extend y un mapget. .
