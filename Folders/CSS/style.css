@@ -69,40 +69,6 @@
   }
 }
 
-/*========== Variables Dark theme ==========*/
-body.dark-theme {
-  --first-color-second: hsl(var(--hue-color), 54%, 12%);
-  --title-color: hsl(var(--hue-color), 24%, 95%);
-  --text-color: hsl(var(--hue-color), 8%, 75%);
-  --input-color: hsl(var(--hue-color), 29%, 16%);
-  --body-color: hsl(var(--hue-color), 29%, 12%);
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
-}
-
-/*========== Button Dark/Light ==========*/
-.nav__dark {
-  display: flex;
-  align-items: center;
-  column-gap: 2rem;
-  position: absolute;
-  left: 3rem;
-  bottom: 4rem;
-}
-
-.change-theme, .change-theme-name {
-  color: var(--text-color);
-}
-
-.change-theme {
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.change-theme-name {
-  font-size: var(--small-font-size);
-}
-
 /*=============== BASE ===============*/
 * {
   box-sizing: border-box;
@@ -642,5930 +608,3075 @@ input {
   padding: .75rem 1rem;
 }
 
+/*--==================== SERIES Y PELICULAS ====================--*/
 
-/*=============== ANIMACION ===============*/
-/*=========== ANIME ===========*/
-/*hellsing*/
-.bannerhellsing{
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 100px;
-  background: url(/Folders/img/fondos/Animacion/Anime/Fecha-estreno-fruits-basket-the-final-ElPalomitron.jpg);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.bannerhellsing .contenthellsing{
-  max-width: 550px;
-}
-.bannerhellsing .contenthellsing h2{
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 2.5em;
-  letter-spacing: 0.1em;
-  color: #fff;
-}
-.bannerhellsing .contenthellsing h2 span{
-  font-weight: 800;
-}
-.bannerhellsing .contenthellsing p{
-  font-size: 1.2em;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  line-height: 1.5em;
-  color: #fff;
-  margin: 15px 0 35px;
-} 
-.play{
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 500;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 1.2em;
-}
-.play img{
-  margin-right: 10px;
-  max-width: 50px;
-}
-.sci{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.sci li{
-  list-style: none;
-}
-.sci li a{
-  text-decoration: none;
-}
-.sci li a img{
-  filter: invert(1);
-  transform: scale(0.6);
-
-}
-.slidehellsing{
-  position: absolute;
-  bottom: 50px;
-  left: calc(50% - 20px / 2);
-  width: 250px;
-  height: 150px;
-  background: url(/Folders/img/poster/53fbba541430b7d9a243a03a74a22603.jpg);
-  background-size: cover;
-  cursor: pointer;
-  animation: animate 25s linear infinite;
-}
-@keyframes animate
-{
-  0%,100%
-  {
-      background-position: top;
-  }
-  45%,55%
-  {
-      background-position: bottom;
-  }
-}
-.trailerhellsing{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100000;
-  background: rgba(0, 0, 0, 0.95);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-backdrop-filter: blur(20px);
-visibility:hidden;
-opacity: 0;
-}
-.trailerhellsing .active{
-  visibility: visible;
-  opacity: 1;
-}
-.trailerhellsing video{
-  max-width: 900px;
-  outline: none;
-}
-.trailerhellsing .close{
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  cursor: pointer;
-  filter: invert(1);
-  max-width: 32px;
-}
-@media (max-width: 991px){  
-
-.bannerhellsing{
-  padding: 100px 50px;
-}
-.bannerhellsing .contenthellsing h2{
-  font-weight: 400;
-  font-size: 2em;
-  letter-spacing: 0.05em;
-}
-.bannerhellsing .contenthellsing p{
-  font-size: 1em;
-}
-.slidehellsing{
-  position: relative;
-  bottom: initial;
-  left: 0;
-  width: 250px;
-  height: 150px;
-  margin: 20px 0;
-}
-.sci{
-  position: absolute;
-  top: initial;
-  right: initial;
-  margin-top: 40px;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.sci li{
-  list-style: none;
-  margin: 0 5px;
-}
-.trailerhellsing video{
-  max-width: 90%;
-  outline: none;
-}
-}
-/*hellsing*/
-
-/*hanako*/
-.bannerhanako{
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 100px;
-  background: url(/Folders/img/fondos/Animacion/Anime/saga-of-tanya-the-evil-1024x640.png);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.bannerhanako .contenthanako{
-  max-width: 550px;
-}
-.bannerhanako .contenthanako h2{
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 2.5em;
-  letter-spacing: 0.1em;
-  color: #fff;
-}
-.bannerhanako .contenthanako h2 span{
-  font-weight: 800;
-}
-.bannerhanako .contenthanako p{
-  font-size: 1.2em;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  line-height: 1.5em;
-  color: #fff;
-  margin: 15px 0 35px;
-} 
-.play{
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 500;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 1.2em;
-}
-.play img{
-  margin-right: 10px;
-  max-width: 50px;
-}
-.sci{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.sci li{
-  list-style: none;
-}
-.sci li a{
-  text-decoration: none;
-}
-.sci li a img{
-  filter: invert(1);
-  transform: scale(0.6);
-
-}
-.slidehanako{
-  position: absolute;
-  bottom: 50px;
-  left: calc(50% - 20px / 2);
-  width: 250px;
-  height: 150px;
-  background: url(/Folders/img/poster/71+3jVRk55L._AC_SX466_.jpg);
-  background-size: cover;
-  cursor: pointer;
-  animation: animate 25s linear infinite;
-}
-@keyframes animate
-{
-  0%,100%
-  {
-      background-position: top;
-  }
-  45%,55%
-  {
-      background-position: bottom;
-  }
-}
-.trailerhanako{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100000;
-  background: rgba(0, 0, 0, 0.95);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-backdrop-filter: blur(20px);
-visibility:hidden;
-opacity: 0;
-}
-.trailerhanako .active{
-  visibility: visible;
-  opacity: 1;
-}
-.trailerhanako video{
-  max-width: 900px;
-  outline: none;
-}
-.trailerhanako .close{
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  cursor: pointer;
-  filter: invert(1);
-  max-width: 32px;
-}
-@media (max-width: 991px){  
-
-.banneramerican{
-  padding: 100px 50px;
-}
-.banneramerican .contenthanako h2{
-  font-weight: 400;
-  font-size: 2em;
-  letter-spacing: 0.05em;
-}
-.banneramerican .contenthanako p{
-  font-size: 1em;
-}
-.slidehanako{
-  position: relative;
-  bottom: initial;
-  left: 0;
-  width: 250px;
-  height: 150px;
-  margin: 20px 0;
-}
-.sci{
-  position: absolute;
-  top: initial;
-  right: initial;
-  margin-top: 40px;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.sci li{
-  list-style: none;
-  margin: 0 5px;
-}
-.trailerhanako video{
-  max-width: 90%;
-  outline: none;
-}
-}
-/*hanako*/
-/*=========== ANIME ===========*/
-
-/*=========== CORTOS ===========*/
-/*rcane*/
-.bannerarcane{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Animacion/Series/Captura\ de\ pantalla\ 2021-12-11\ 183804.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerarcane .contentarcane{
-    max-width: 550px;
-  }
-  .bannerarcane .contentarcane h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerarcane .contentarcane h2 span{
-    font-weight: 800;
-  }
-  .bannerarcane .contentarcane p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidearcane{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/Arcane_-_Poster.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  .trailerarcane{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerarcane .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerarcane video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerarcane .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerarcane{
-    padding: 100px 50px;
-  }
-  .bannerarcane .contentarcane h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerarcane .contentarcane p{
-    font-size: 1em;
-  }
-  .slidearcane{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerarcane video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*hanako*/
-  
-  /*desencanto*/
-  .bannerdesencanto{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Animacion/Series/1535719781531.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerdesencanto .contentdesencanto{
-    max-width: 550px;
-  }
-  .bannerdesencanto .contentdesencanto h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerdesencanto .contentdesencanto h2 span{
-    font-weight: 800;
-  }
-  .bannerdesencanto .contentdesencanto p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidedesencanto{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/6f8cd2ff0f9ea69d6e2736b0111f1fb6.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  .trailerdesencanto{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerdesencanto .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerdesencanto video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerdesencanto .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerdesencanto{
-    padding: 100px 50px;
-  }
-  .bannerdesencanto .contentdesencanto h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerdesencanto .contentdesencanto p{
-    font-size: 1em;
-  }
-  .slidedesencanto{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerdesencanto video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*DESECCANTO*/
-/*=========== CORTOS ===========*/
-
-/*=========== SERIES ===========*/
-/* ====== AMAZON ====== */
-/* the boys */
-.bannertheboys{
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 100px;
-  background: url(/Folders/img/Fondos/SeriesTV/Amazon/4VFIL7NZRVE3TILEGAL56OXU3I.jpg);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.bannertheboys .contentTBOYS{
-  max-width: 550px;
-}
-.bannertheboys .contentTBOYS h2{
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 2.5em;
-  letter-spacing: 0.1em;
-  color: #fff;
-}
-.bannertheboys .contentTBOYS h2 span{
-  font-weight: 800;
-}
-.bannertheboys .contentTBOYS p{
-  font-size: 1.2em;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  line-height: 1.5em;
-  color: #fff;
-  margin: 15px 0 35px;
-} 
-.play{
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 500;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 1.2em;
-}
-.play img{
-  margin-right: 10px;
-  max-width: 50px;
-}
-.sci{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.sci li{
-  list-style: none;
-}
-.sci li a{
-  text-decoration: none;
-}
-.sci li a img{
-  filter: invert(1);
-  transform: scale(0.6);
-
-}
-.slideTBoys{
-  position: absolute;
-  bottom: 50px;
-  left: calc(50% - 20px / 2);
-  width: 250px;
-  height: 150px;
-  background: url(/Folders/img/Poster/The_Boys_Serie_de_TV-329113306-large.jpg);
-  background-size: cover;
-  cursor: pointer;
-  animation: animate 25s linear infinite;
-}
-@keyframes animate
-{
-  0%,100%
-  {
-      background-position: top;
-  }
-  45%,55%
-  {
-      background-position: bottom;
-  }
-}
-
-@media (max-width: 991px){  
-
-.bannertheboys{
-  padding: 100px 50px;
-}
-.bannertheboys .contentTBOYS h2{
-  font-weight: 400;
-  font-size: 2em;
-  letter-spacing: 0.05em;
-}
-.bannertheboys .contentTBOYS p{
-  font-size: 1em;
-}
-.slideTBoys{
-  position: relative;
-  bottom: initial;
-  left: 0;
-  width: 250px;
-  height: 150px;
-  margin: 20px 0;
-}
-.sci{
-  position: absolute;
-  top: initial;
-  right: initial;
-  margin-top: 40px;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.sci li{
-  list-style: none;
-  margin: 0 5px;
-}
-}
-/*the boys*/
-/* ====== AMAZON ====== */
-/* ====== HBO ====== */
-.bannereuphoria{
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 100px;
-  background: url(/Folders/img/Fondos/SeriesTV/HBO/4dc23d8dadeb4f2f9a434b76ae1d88d1.jpg);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.bannereuphoria .contenteuphoria{
-  max-width: 550px;
-}
-.bannereuphoria .contenteuphoria h2{
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 2.5em;
-  letter-spacing: 0.1em;
-  color: #fff;
-}
-.bannereuphoria .contenteuphoria h2 span{
-  font-weight: 800;
-}
-.bannereuphoria .contenteuphoria p{
-  font-size: 1.2em;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  line-height: 1.5em;
-  color: #fff;
-  margin: 15px 0 35px;
-} 
-.play{
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 500;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 1.2em;
-}
-.play img{
-  margin-right: 10px;
-  max-width: 50px;
-}
-.sci{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.sci li{
-  list-style: none;
-}
-.sci li a{
-  text-decoration: none;
-}
-.sci li a img{
-  filter: invert(1);
-  transform: scale(0.6);
-
-}
-.slideeuphoria{
-  position: absolute;
-  bottom: 50px;
-  left: calc(50% - 20px / 2);
-  width: 250px;
-  height: 150px;
-  background: url(/Folders/img/Poster/4123858.jpg);
-  background-size: cover;
-  cursor: pointer;
-  animation: animate 25s linear infinite;
-}
-@keyframes animate
-{
-  0%,100%
-  {
-      background-position: top;
-  }
-  45%,55%
-  {
-      background-position: bottom;
-  }
-}
-
-@media (max-width: 991px){  
-
-.bannereuphoria{
-  padding: 100px 50px;
-}
-.bannereuphoria .contenteuphoria h2{
-  font-weight: 400;
-  font-size: 2em;
-  letter-spacing: 0.05em;
-}
-.bannereuphoria .contenteuphoria p{
-  font-size: 1em;
-}
-.slideeuphoria{
-  position: relative;
-  bottom: initial;
-  left: 0;
-  width: 250px;
-  height: 150px;
-  margin: 20px 0;
-}
-.sci{
-  position: absolute;
-  top: initial;
-  right: initial;
-  margin-top: 40px;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.sci li{
-  list-style: none;
-  margin: 0 5px;
-}
-}
-/* GOT */
-.bannerGOT{
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 100px;
-  background: url(/Folders/img/Fondos/SeriesTV/HBO/xd.jpg);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.bannerGOT .contentGOT{
-  max-width: 550px;
-}
-.bannerGOT .contentGOT h2{
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 2.5em;
-  letter-spacing: 0.1em;
-  color: #fff;
-}
-.bannerGOT .contentGOT h2 span{
-  font-weight: 800;
-}
-.bannerGOT .contentGOT p{
-  font-size: 1.2em;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  line-height: 1.5em;
-  color: #fff;
-  margin: 15px 0 35px;
-} 
-.play{
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 500;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 1.2em;
-}
-.play img{
-  margin-right: 10px;
-  max-width: 50px;
-}
-.sci{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.sci li{
-  list-style: none;
-}
-.sci li a{
-  text-decoration: none;
-}
-.sci li a img{
-  filter: invert(1);
-  transform: scale(0.6);
-
-}
-.slideGOT{
-  position: absolute;
-  bottom: 50px;
-  left: calc(50% - 20px / 2);
-  width: 250px;
-  height: 150px;
-  background: url(/Folders/img/Poster/4123858.jpg);
-  background-size: cover;
-  cursor: pointer;
-  animation: animate 25s linear infinite;
-}
-@keyframes animate
-{
-  0%,100%
-  {
-      background-position: top;
-  }
-  45%,55%
-  {
-      background-position: bottom;
-  }
-}
-
-@media (max-width: 991px){  
-
-.bannerGOT{
-  padding: 100px 50px;
-}
-.bannerGOT .contentGOT h2{
-  font-weight: 400;
-  font-size: 2em;
-  letter-spacing: 0.05em;
-}
-.bannerGOT .contentGOT p{
-  font-size: 1em;
-}
-.slideGOT{
-  position: relative;
-  bottom: initial;
-  left: 0;
-  width: 250px;
-  height: 150px;
-  margin: 20px 0;
-}
-.sci{
-  position: absolute;
-  top: initial;
-  right: initial;
-  margin-top: 40px;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.sci li{
-  list-style: none;
-  margin: 0 5px;
-}
-}
-/*GOT */
-/* ====== HBO ====== */
-/* ====== NETFLIX ====== */
-/* lucifer */
-.bannerCOBRA{
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 100px;
-  background: url(/Folders/img/Fondos/SeriesTV/Netflix/89c047118988599.60941644d8953\(1\).jpg);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.bannerCOBRA .contentCOBRA{
-  max-width: 550px;
-}
-.bannerCOBRA .contentCOBRA h2{
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 2.5em;
-  letter-spacing: 0.1em;
-  color: #fff;
-}
-.bannerCOBRA .contentCOBRA h2 span{
-  font-weight: 800;
-}
-.bannerCOBRA .contentCOBRA p{
-  font-size: 1.2em;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  line-height: 1.5em;
-  color: #fff;
-  margin: 15px 0 35px;
-} 
-.play{
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 500;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 1.2em;
-}
-.play img{
-  margin-right: 10px;
-  max-width: 50px;
-}
-.sci{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.sci li{
-  list-style: none;
-}
-.sci li a{
-  text-decoration: none;
-}
-.sci li a img{
-  filter: invert(1);
-  transform: scale(0.6);
-
-}
-.slideCOBRA{
-  position: absolute;
-  bottom: 50px;
-  left: calc(50% - 20px / 2);
-  width: 250px;
-  height: 150px;
-  background: url(/Folders/img/Poster/4123858.jpg);
-  background-size: cover;
-  cursor: pointer;
-  animation: animate 25s linear infinite;
-}
-@keyframes animate
-{
-  0%,100%
-  {
-      background-position: top;
-  }
-  45%,55%
-  {
-      background-position: bottom;
-  }
-}
-
-@media (max-width: 991px){  
-
-.bannerCOBRA{
-  padding: 100px 50px;
-}
-.bannerCOBRA .contentCOBRA h2{
-  font-weight: 400;
-  font-size: 2em;
-  letter-spacing: 0.05em;
-}
-.bannerCOBRA .contentCOBRA p{
-  font-size: 1em;
-}
-.slideCOBRA{
-  position: relative;
-  bottom: initial;
-  left: 0;
-  width: 250px;
-  height: 150px;
-  margin: 20px 0;
-}
-.sci{
-  position: absolute;
-  top: initial;
-  right: initial;
-  margin-top: 40px;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.sci li{
-  list-style: none;
-  margin: 0 5px;
-}
-}
-/* cobra */
-.bannerLUCI{
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 100px;
-  background: url(/Folders/img/Fondos/SeriesTV/Netflix/9f864d111465477.6002203db0b6b.jpg);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.bannerLUCI .contentLUCI{
-  max-width: 550px;
-}
-.bannerLUCI .contentLUCI h2{
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 2.5em;
-  letter-spacing: 0.1em;
-  color: #fff;
-}
-.bannerLUCI .contentLUCI h2 span{
-  font-weight: 800;
-}
-.bannerLUCI .contentLUCI p{
-  font-size: 1.2em;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  line-height: 1.5em;
-  color: #fff;
-  margin: 15px 0 35px;
-} 
-.play{
-  position: relative;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 500;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 1.2em;
-}
-.play img{
-  margin-right: 10px;
-  max-width: 50px;
-}
-.sci{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.sci li{
-  list-style: none;
-}
-.sci li a{
-  text-decoration: none;
-}
-.sci li a img{
-  filter: invert(1);
-  transform: scale(0.6);
-
-}
-.slideLUCI{
-  position: absolute;
-  bottom: 50px;
-  left: calc(50% - 20px / 2);
-  width: 250px;
-  height: 150px;
-  background: url(/Folders/img/Poster/4123858.jpg);
-  background-size: cover;
-  cursor: pointer;
-  animation: animate 25s linear infinite;
-}
-@keyframes animate
-{
-  0%,100%
-  {
-      background-position: top;
-  }
-  45%,55%
-  {
-      background-position: bottom;
-  }
-}
-
-@media (max-width: 991px){  
-
-.bannerLUCI{
-  padding: 100px 50px;
-}
-.bannerLUCI .contentLUCI h2{
-  font-weight: 400;
-  font-size: 2em;
-  letter-spacing: 0.05em;
-}
-.bannerLUCI .contentLUCI p{
-  font-size: 1em;
-}
-.slideLUCI{
-  position: relative;
-  bottom: initial;
-  left: 0;
-  width: 250px;
-  height: 150px;
-  margin: 20px 0;
-}
-.sci{
-  position: absolute;
-  top: initial;
-  right: initial;
-  margin-top: 40px;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.sci li{
-  list-style: none;
-  margin: 0 5px;
-}
-}
-/* ====== NETFLIX ====== */
-
-/*=========== SERIES ===========*/
-
-/*=========== PELICULAS ===========*/
-/*rcane*/
-.bannerarcane{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Animacion/Series/Captura\ de\ pantalla\ 2021-12-11\ 183804.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerarcane .contentarcane{
-    max-width: 550px;
-  }
-  .bannerarcane .contentarcane h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerarcane .contentarcane h2 span{
-    font-weight: 800;
-  }
-  .bannerarcane .contentarcane p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidearcane{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/Arcane_-_Poster.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
- 
-  @media (max-width: 991px){  
-  
-  .bannerarcane{
-    padding: 100px 50px;
-  }
-  .bannerarcane .contentarcane h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerarcane .contentarcane p{
-    font-size: 1em;
-  }
-  .slidearcane{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerarcane video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*hanako*/
-  
-  /*desencanto*/
-  .bannerdesencanto{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Animacion/Series/1535719781531.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerdesencanto .contentdesencanto{
-    max-width: 550px;
-  }
-  .bannerdesencanto .contentdesencanto h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerdesencanto .contentdesencanto h2 span{
-    font-weight: 800;
-  }
-  .bannerdesencanto .contentdesencanto p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidedesencanto{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/6f8cd2ff0f9ea69d6e2736b0111f1fb6.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  .trailerdesencanto{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerdesencanto .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerdesencanto video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerdesencanto .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerdesencanto{
-    padding: 100px 50px;
-  }
-  .bannerdesencanto .contentdesencanto h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerdesencanto .contentdesencanto p{
-    font-size: 1em;
-  }
-  .slidedesencanto{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerdesencanto video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*DESECCANTO*/
-/*=========== PELICULAS ===========*/
-/*=============== ANIMACION ===============*/
-
-/*=============== DISNEY ===============*/
-/*=========== MARVEL ===========*/
-/*wanda*/
-.bannerwanda{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Disney/Marvel/wandavision.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerwanda .contentwanda{
-    max-width: 550px;
-  }
-  .bannerwanda .contentwanda h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerwanda .contentwanda h2 span{
-    font-weight: 800;
-  }
-  .bannerwanda .contentwanda p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidewanda{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/VDMEO2PH55BXPI2ACF3KY235VM.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  .trailerwanda{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerwanda .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerwanda video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerwanda .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerwanda{
-    padding: 100px 50px;
-  }
-  .bannerwanda .contentwanda h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerwanda .contentwanda p{
-    font-size: 1em;
-  }
-  .slidewanda{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerwanda video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*wanda*/
-  
-  /*eternals*/
-  .bannereternals{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Disney/marvel/maxresdefault.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannereternals .contenteternals{
-    max-width: 550px;
-  }
-  .bannereternals .contenteternals h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannereternals .contenteternals h2 span{
-    font-weight: 800;
-  }
-  .bannereternals .contenteternals p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slideeternals{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/Eternals-Pelicula-Poster-Marvel-Studios-Afiche-Entradas-Preventa-Peru-819x1024.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  .trailereternals{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailereternals .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailereternals video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailereternals .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannereternals{
-    padding: 100px 50px;
-  }
-  .bannereternals .contenteternals h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannereternals .contenteternals p{
-    font-size: 1em;
-  }
-  .slideeternals{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailereternals video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*eternals*/
-/*=========== MARVEL ===========*/
-
-/*=========== NAT. G. ===========*/
-/*wanda*/
-.bannerwanda{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Disney/Marvel/wandavision.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerwanda .contentwanda{
-    max-width: 550px;
-  }
-  .bannerwanda .contentwanda h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerwanda .contentwanda h2 span{
-    font-weight: 800;
-  }
-  .bannerwanda .contentwanda p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidewanda{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/VDMEO2PH55BXPI2ACF3KY235VM.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  .trailerwanda{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerwanda .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerwanda video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerwanda .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerwanda{
-    padding: 100px 50px;
-  }
-  .bannerwanda .contentwanda h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerwanda .contentwanda p{
-    font-size: 1em;
-  }
-  .slidewanda{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerwanda video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*wanda*/
-  
-  /*eternals*/
-  .bannereternals{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Disney/marvel/maxresdefault.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannereternals .contenteternals{
-    max-width: 550px;
-  }
-  .bannereternals .contenteternals h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannereternals .contenteternals h2 span{
-    font-weight: 800;
-  }
-  .bannereternals .contenteternals p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slideeternals{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/Eternals-Pelicula-Poster-Marvel-Studios-Afiche-Entradas-Preventa-Peru-819x1024.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  .trailereternals{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailereternals .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailereternals video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailereternals .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannereternals{
-    padding: 100px 50px;
-  }
-  .bannereternals .contenteternals h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannereternals .contenteternals p{
-    font-size: 1em;
-  }
-  .slideeternals{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailereternals video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*eternals*/
-/*=========== NAT. G. ===========*/
-
-/*=========== DISNEY ===========*/
-/*wanda*/
-.bannerwanda{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Disney/Marvel/wandavision.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerwanda .contentwanda{
-    max-width: 550px;
-  }
-  .bannerwanda .contentwanda h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerwanda .contentwanda h2 span{
-    font-weight: 800;
-  }
-  .bannerwanda .contentwanda p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidewanda{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/VDMEO2PH55BXPI2ACF3KY235VM.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  .trailerwanda{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerwanda .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerwanda video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerwanda .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerwanda{
-    padding: 100px 50px;
-  }
-  .bannerwanda .contentwanda h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerwanda .contentwanda p{
-    font-size: 1em;
-  }
-  .slidewanda{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerwanda video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*wanda*/
-  
-  /*eternals*/
-  .bannereternals{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Disney/marvel/maxresdefault.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannereternals .contenteternals{
-    max-width: 550px;
-  }
-  .bannereternals .contenteternals h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannereternals .contenteternals h2 span{
-    font-weight: 800;
-  }
-  .bannereternals .contenteternals p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slideeternals{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/Eternals-Pelicula-Poster-Marvel-Studios-Afiche-Entradas-Preventa-Peru-819x1024.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  .trailereternals{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailereternals .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailereternals video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailereternals .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannereternals{
-    padding: 100px 50px;
-  }
-  .bannereternals .contenteternals h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannereternals .contenteternals p{
-    font-size: 1em;
-  }
-  .slideeternals{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailereternals video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*eternals*/
-/*=========== DISNEY ===========*/
-
-/*=========== PIXAR ===========*/
-/*wanda*/
-.bannerwanda{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Disney/Marvel/wandavision.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerwanda .contentwanda{
-    max-width: 550px;
-  }
-  .bannerwanda .contentwanda h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerwanda .contentwanda h2 span{
-    font-weight: 800;
-  }
-  .bannerwanda .contentwanda p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidewanda{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/VDMEO2PH55BXPI2ACF3KY235VM.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  .trailerwanda{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerwanda .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerwanda video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerwanda .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerwanda{
-    padding: 100px 50px;
-  }
-  .bannerwanda .contentwanda h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerwanda .contentwanda p{
-    font-size: 1em;
-  }
-  .slidewanda{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerwanda video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*wanda*/
-  
-  /*eternals*/
-  .bannereternals{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Disney/marvel/maxresdefault.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannereternals .contenteternals{
-    max-width: 550px;
-  }
-  .bannereternals .contenteternals h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannereternals .contenteternals h2 span{
-    font-weight: 800;
-  }
-  .bannereternals .contenteternals p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slideeternals{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/Eternals-Pelicula-Poster-Marvel-Studios-Afiche-Entradas-Preventa-Peru-819x1024.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  .trailereternals{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailereternals .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailereternals video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailereternals .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannereternals{
-    padding: 100px 50px;
-  }
-  .bannereternals .contenteternals h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannereternals .contenteternals p{
-    font-size: 1em;
-  }
-  .slideeternals{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailereternals video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*eternals*/
-/*=========== PIXAR ===========*/
-
-/*=========== STAR ===========*/
-/*american*/
-.banneramerican{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/Fondos/SeriesTV/HBO/american-horror-stories-ep-1-2464247.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .banneramerican .contentmerican{
-    max-width: 550px;
-  }
-  .banneramerican .contentmerican h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .banneramerican .contentmerican h2 span{
-    font-weight: 800;
-  }
-  .banneramerican .contentmerican p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidemerican{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/51PtTb-lp1L._AC_.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  .trailermerican{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailermerican .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailermerican video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailermerican .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .banneramerican{
-    padding: 100px 50px;
-  }
-  .banneramerican .contentmerican h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .banneramerican .contentmerican p{
-    font-size: 1em;
-  }
-  .slidemerican{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailermerican video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*american*/
-/*=========== STAR ===========*/
-/*=============== DISNEY ===============*/
-
-
-/*=============== WARNER BROS ===============*/
-/*=========== DC ===========*/
-/*joker*/
+/* ====== JOKER ====== */
 .banner{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Warner_Bross/DC/bg.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .banner .content{
-    max-width: 550px;
-  }
-  .banner .content h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .banner .content h2 span{
-    font-weight: 800;
-  }
-  .banner .content p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slide{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/joker.png);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  .trailer{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailer .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailer video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailer .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  .selection{
-    padding: 20px, 50px;
-  }
-  .selection .logo{
-    max-width: 80px;
-  }
-  .banner{
-    padding: 100px 50px;
-  }
-  .banner .content h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .banner .content p{
-    font-size: 1em;
-  }
-  .slide{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailer video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  
-  .bannerparte2{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Warner_Bross/DC/Joker-de-Joaquin-Phoenix-758x468.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerparte2 .contentparte2{
-    max-width: 550px;
-  }
-  .bannerparte2 .contentparte2 h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerparte2 .contentparte2 h2 span{
-    font-weight: 800;
-  }
-  .bannerparte2 .contentparte2 p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  
-  @media (max-width: 991px){  
-  .bannerparte2{
-    padding: 100px 50px;
-  }
-  .bannerparte2 .content h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerparte2 .content p{
-    font-size: 1em;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  }
-  /*joker*/
-  /*aquaman*/
-  .banner1{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Warner_Bross/DC/aquaman1.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .banner1 .content1{
-    max-width: 550px;
-  }
-  .banner1 .content1 h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .banner1 .content1 h2 span{
-    font-weight: 800;
-  }
-  .banner1 .content1 p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slide1{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/71SngnQD70L._AC_SY679_.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  .trailer1{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-  }
-  .trailer1 .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailer1 video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailer1 .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  .banner1{
-    padding: 100px 50px;
-  }
-  .banner1 .content1 h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .banner1 .content1 p{
-    font-size: 1em;
-  }
-  .slide1{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailer video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  
-  .bannerparte1{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/Warner_Bross/DC/aquaman.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerparte1 .contentparte1{
-    max-width: 550px;
-  }
-  .bannerparte1 .contentparte1 h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerparte1 .contentparte1 h2 span{
-    font-weight: 800;
-  }
-  .bannerparte1 .contentparte1 p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  @keyframes animate
-  {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
-  }
-  @media (max-width: 991px){  
-  .bannerparte1{
-    padding: 100px 50px;
-  }
-  .bannerparte1 .contentparte1 h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerparte1 .contentparte1 p{
-    font-size: 1em;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  }
-  /*aquaman*/
-/*=========== DC ===========*/
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/PYs/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner .content{
+  max-width: 550px;
+}
+.banner .content h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner .content h2 span{
+  font-weight: 800;
+}
+.banner .content p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
 
-/*=========== HARRY POTTER ===========*/
-/*bly*/
-.bannerbly{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos//SeriesTV/Netflix/5e61c0a5-5125-47e6-8379-033c63f97905_16-9-discover-aspect-ratio_default_0.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerbly .contentbly{
-    max-width: 550px;
-  }
-  .bannerbly .contentbly h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerbly .contentbly h2 span{
-    font-weight: 800;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidebly{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/unnamed.png);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
+}
+.slide{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/joker.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
   {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
+      background-position: top;
   }
-  .trailerbly{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerbly .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerbly video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerbly .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerbly{
-    padding: 100px 50px;
-  }
-  .bannerbly .contentbly h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1em;
-  }
-  .slidebly{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerbly video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*bly*/
-/*=========== HARRY POTTER ===========*/
-
-/*=========== PELICULAS ===========*/
-/*bly*/
-.bannerbly{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos//SeriesTV/Netflix/5e61c0a5-5125-47e6-8379-033c63f97905_16-9-discover-aspect-ratio_default_0.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerbly .contentbly{
-    max-width: 550px;
-  }
-  .bannerbly .contentbly h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerbly .contentbly h2 span{
-    font-weight: 800;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidebly{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/unnamed.png);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
+  45%,55%
   {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
+      background-position: bottom;
   }
-  .trailerbly{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerbly .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerbly video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerbly .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerbly{
-    padding: 100px 50px;
-  }
-  .bannerbly .contentbly h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1em;
-  }
-  .slidebly{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerbly video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*bly*/
-/*=========== PELICULAS ===========*/
-/*=============== WARNER BROS ===============*/
+}
 
-/*=============== PELICULAS ===============*/
-/*=========== AMAZON ===========*/
-/*bly*/
-.bannerbly{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos//SeriesTV/Netflix/5e61c0a5-5125-47e6-8379-033c63f97905_16-9-discover-aspect-ratio_default_0.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerbly .contentbly{
-    max-width: 550px;
-  }
-  .bannerbly .contentbly h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerbly .contentbly h2 span{
-    font-weight: 800;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidebly{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/unnamed.png);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
+@media (max-width: 991px){  
+
+.banner{
+  padding: 100px 50px;
+}
+.banner .content h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner .content p{
+  font-size: 1em;
+}
+.slide{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== JOKER ====== */
+
+/* ====== AQUAMAN ====== */
+.banner1{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/PYs/aquaman.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner1 .content1{
+  max-width: 550px;
+}
+.banner1 .content1 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner1 .content1 h2 span{
+  font-weight: 800;
+}
+.banner1 .content1 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide1{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/71SngnQD70L._AC_SY679_.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
   {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
+      background-position: top;
   }
-  .trailerbly{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerbly .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerbly video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerbly .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerbly{
-    padding: 100px 50px;
-  }
-  .bannerbly .contentbly h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1em;
-  }
-  .slidebly{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerbly video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*bly*/
-/*=========== AMAZON ===========*/
-
-/*=========== HBO ===========*/
-/*bly*/
-.bannerbly{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos//SeriesTV/Netflix/5e61c0a5-5125-47e6-8379-033c63f97905_16-9-discover-aspect-ratio_default_0.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerbly .contentbly{
-    max-width: 550px;
-  }
-  .bannerbly .contentbly h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerbly .contentbly h2 span{
-    font-weight: 800;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidebly{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/unnamed.png);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
+  45%,55%
   {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
+      background-position: bottom;
   }
-  .trailerbly{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerbly .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerbly video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerbly .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerbly{
-    padding: 100px 50px;
-  }
-  .bannerbly .contentbly h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1em;
-  }
-  .slidebly{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerbly video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*bly*/
-/*=========== HBO ===========*/
+}
 
-/*=========== NETFLIX ===========*/
-/*bly*/
-.bannerbly{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos//SeriesTV/Netflix/5e61c0a5-5125-47e6-8379-033c63f97905_16-9-discover-aspect-ratio_default_0.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerbly .contentbly{
-    max-width: 550px;
-  }
-  .bannerbly .contentbly h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerbly .contentbly h2 span{
-    font-weight: 800;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidebly{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/unnamed.png);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
+@media (max-width: 991px){  
+
+.banner1{
+  padding: 100px 50px;
+}
+.banner1 .content1 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner1 .content1 p{
+  font-size: 1em;
+}
+.slide1{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== AQUAMAN ====== */
+
+/* ====== EUPHORIA ====== */
+.banner2{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/PYs/4dc23d8dadeb4f2f9a434b76ae1d88d1.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner2 .content2{
+  max-width: 550px;
+}
+.banner2 .content2 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner2 .content2 h2 span{
+  font-weight: 800;
+}
+.banner2 .content2 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide2{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/4123858.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
   {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
+      background-position: top;
   }
-  .trailerbly{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerbly .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerbly video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerbly .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerbly{
-    padding: 100px 50px;
-  }
-  .bannerbly .contentbly h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1em;
-  }
-  .slidebly{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerbly video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*bly*/
-/*=========== NETFLIX ===========*/
-/*=============== PELICULAS ===============*/
-
-/*=============== SERIES TV ===============*/
-/*=========== AMAZON ===========*/
-/*bly*/
-.bannerbly{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos//SeriesTV/Netflix/5e61c0a5-5125-47e6-8379-033c63f97905_16-9-discover-aspect-ratio_default_0.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerbly .contentbly{
-    max-width: 550px;
-  }
-  .bannerbly .contentbly h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerbly .contentbly h2 span{
-    font-weight: 800;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidebly{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/unnamed.png);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
+  45%,55%
   {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
+      background-position: bottom;
   }
-  .trailerbly{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerbly .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerbly video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerbly .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerbly{
-    padding: 100px 50px;
-  }
-  .bannerbly .contentbly h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1em;
-  }
-  .slidebly{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerbly video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*bly*/
-/*=========== AMAZON ===========*/
+}
 
-/*=========== HBO ===========*/
-/*bly*/
-.bannerbly{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos//SeriesTV/Netflix/5e61c0a5-5125-47e6-8379-033c63f97905_16-9-discover-aspect-ratio_default_0.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerbly .contentbly{
-    max-width: 550px;
-  }
-  .bannerbly .contentbly h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerbly .contentbly h2 span{
-    font-weight: 800;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidebly{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/unnamed.png);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
+@media (max-width: 991px){  
+
+.banner2{
+  padding: 100px 50px;
+}
+.banner2 .content2 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner2 .content2 p{
+  font-size: 1em;
+}
+.slide2{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== EUPHORIA ====== */
+
+/* ====== MPD ====== */
+.banner3{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/PYs/9bf2b00ac4f4a79e5a986fd42e87890b9df3ce4ed8cf57ccc3fd048078a38ea3._UY500_UX667_RI_V_TTW_.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner3 .content3{
+  max-width: 550px;
+}
+.banner3 .content3 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner3 .content3 h2 span{
+  font-weight: 800;
+}
+.banner3 .content p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide3{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/the_gangster_the_cop_the_devil_poster.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
   {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
+      background-position: top;
   }
-  .trailerbly{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerbly .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerbly video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerbly .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerbly{
-    padding: 100px 50px;
-  }
-  .bannerbly .contentbly h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1em;
-  }
-  .slidebly{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerbly video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*bly*/
-/*=========== HBO ===========*/
-
-/*=========== NETFLIX ===========*/
-/*bly*/
-.bannerbly{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos//SeriesTV/Netflix/5e61c0a5-5125-47e6-8379-033c63f97905_16-9-discover-aspect-ratio_default_0.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerbly .contentbly{
-    max-width: 550px;
-  }
-  .bannerbly .contentbly h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerbly .contentbly h2 span{
-    font-weight: 800;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidebly{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/unnamed.png);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
+  45%,55%
   {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
+      background-position: bottom;
   }
-  .trailerbly{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerbly .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerbly video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerbly .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerbly{
-    padding: 100px 50px;
-  }
-  .bannerbly .contentbly h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerbly .contentbly p{
-    font-size: 1em;
-  }
-  .slidebly{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerbly video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*bly*/
-/*=========== NETFLIX ===========*/
-/*=============== SERIES TV ===============*/
+}
 
-/*=============== DORAMAS ===============*/
-/*=========== CHINAS ===========*/
-  /*extracurricular*/
-  .bannerextracurricular{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/doramas/Coreanas/Extracurricular-netflix.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerextracurricular .contentextracurricular{
-    max-width: 550px;
-  }
-  .bannerextracurricular .contentextracurricular h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerextracurricular .contentextracurricular h2 span{
-    font-weight: 800;
-  }
-  .bannerextracurricular .contentextracurricular p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slideextracurricular{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/Extracurricular-2020-06.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
+@media (max-width: 991px){  
+
+.banner3{
+  padding: 100px 50px;
+}
+.banner3 .content3 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner3 .content3 p{
+  font-size: 1em;
+}
+.slide3{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== MPD ====== */
+
+/* ====== COBRA KAI ====== */
+.banner4{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/PYs/9f864d111465477.6002203db0b6b.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner4 .content4{
+  max-width: 550px;
+}
+.banner4 .content4 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner4 .content4 h2 span{
+  font-weight: 800;
+}
+.banner4 .content4 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide4{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/cobra.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
   {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
+      background-position: top;
   }
-  .trailerextracurricular{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerextracurricular .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerextracurricular video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerextracurricular .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerextracurricular{
-    padding: 100px 50px;
-  }
-  .bannerextracurricular .contentextracurricular h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerextracurricular .contentextracurricular p{
-    font-size: 1em;
-  }
-  .slideextracurricular{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerextracurricular video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*extracurricular*/
-/*=========== CHINAS ===========*/
-
-/*=========== COREA ===========*/
-/*happiness*/
-.bannerhappiness{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/doramas/Coreanas/Captura\ de\ pantalla\ 2021-12-11\ 225131.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerhappiness .contenthappiness{
-    max-width: 550px;
-  }
-  .bannerhappiness .contenthappiness h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerhappiness .contenthappiness h2 span{
-    font-weight: 800;
-  }
-  .bannerhappiness .contenthappiness p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slidehappiness{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/Happiness-tvN-2021-02.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
+  45%,55%
   {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
+      background-position: bottom;
   }
-  .trailerhappiness{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerhappiness .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerhappiness video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerhappiness .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerhappiness{
-    padding: 100px 50px;
-  }
-  .bannerhappiness .contenthappiness h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerhappiness .contenthappiness p{
-    font-size: 1em;
-  }
-  .slidehappiness{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerhappiness video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*happiness*/
-  
-  /*extracurricular*/
-  .bannerextracurricular{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/doramas/Coreanas/Extracurricular-netflix.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerextracurricular .contentextracurricular{
-    max-width: 550px;
-  }
-  .bannerextracurricular .contentextracurricular h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerextracurricular .contentextracurricular h2 span{
-    font-weight: 800;
-  }
-  .bannerextracurricular .contentextracurricular p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slideextracurricular{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/Extracurricular-2020-06.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
+}
+
+@media (max-width: 991px){  
+
+.banner4{
+  padding: 100px 50px;
+}
+.banner4 .content4 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner4 .content4 p{
+  font-size: 1em;
+}
+.slide4{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== COBRA KAI ====== */
+
+/* ====== DR. STRANGE ====== */
+.banner5{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/PYs/db74a9133487437.61bee9d9b49c8\(1\).jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner5 .content5{
+  max-width: 550px;
+}
+.banner5 .content5 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner5 .content5 h2 span{
+  font-weight: 800;
+}
+.banner5 .content5 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide5{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/dr.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
   {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
+      background-position: top;
   }
-  .trailerextracurricular{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerextracurricular .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerextracurricular video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerextracurricular .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerextracurricular{
-    padding: 100px 50px;
-  }
-  .bannerextracurricular .contentextracurricular h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerextracurricular .contentextracurricular p{
-    font-size: 1em;
-  }
-  .slideextracurricular{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerextracurricular video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*extracurricular*/
-/*=========== COREA ===========*/
-
-/*=========== JAPONESAS ===========*/
-  /*extracurricular*/
-  .bannerextracurricular{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/doramas/Coreanas/Extracurricular-netflix.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerextracurricular .contentextracurricular{
-    max-width: 550px;
-  }
-  .bannerextracurricular .contentextracurricular h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerextracurricular .contentextracurricular h2 span{
-    font-weight: 800;
-  }
-  .bannerextracurricular .contentextracurricular p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slideextracurricular{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/Extracurricular-2020-06.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
+  45%,55%
   {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
+      background-position: bottom;
   }
-  .trailerextracurricular{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
-  }
-  .trailerextracurricular .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerextracurricular video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerextracurricular .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerextracurricular{
-    padding: 100px 50px;
-  }
-  .bannerextracurricular .contentextracurricular h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerextracurricular .contentextracurricular p{
-    font-size: 1em;
-  }
-  .slideextracurricular{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerextracurricular video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*extracurricular*/
-/*=========== JAPONESAS ===========*/
+}
 
-/*=========== TAILANDESAS ===========*/
-  /*extracurricular*/
-  .bannerextracurricular{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    background: url(/Folders/img/fondos/doramas/Coreanas/Extracurricular-netflix.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .bannerextracurricular .contentextracurricular{
-    max-width: 550px;
-  }
-  .bannerextracurricular .contentextracurricular h2{
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    color: #fff;
-  }
-  .bannerextracurricular .contentextracurricular h2 span{
-    font-weight: 800;
-  }
-  .bannerextracurricular .contentextracurricular p{
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5em;
-    color: #fff;
-    margin: 15px 0 35px;
-  } 
-  .play{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-size: 1.2em;
-  }
-  .play img{
-    margin-right: 10px;
-    max-width: 50px;
-  }
-  .sci{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .sci li{
-    list-style: none;
-  }
-  .sci li a{
-    text-decoration: none;
-  }
-  .sci li a img{
-    filter: invert(1);
-    transform: scale(0.6);
-  
-  }
-  .slideextracurricular{
-    position: absolute;
-    bottom: 50px;
-    left: calc(50% - 20px / 2);
-    width: 250px;
-    height: 150px;
-    background: url(/Folders/img/poster/Extracurricular-2020-06.jpg);
-    background-size: cover;
-    cursor: pointer;
-    animation: animate 25s linear infinite;
-  }
-  @keyframes animate
+@media (max-width: 991px){  
+
+.banner5{
+  padding: 100px 50px;
+}
+.banner5 .content5 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner5 .content5 p{
+  font-size: 1em;
+}
+.slide5{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== DR. STRANGE ====== */
+
+/* ====== GOEDAM ====== */
+.banner6{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/PYs/Ef4OPJ0XYAE1nKF.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner6 .content6{
+  max-width: 550px;
+}
+.banner6 .content6 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner6 .content6 h2 span{
+  font-weight: 800;
+}
+.banner6 .content6 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide6{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/goedam-netflix-poster.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
   {
-    0%,100%
-    {
-        background-position: top;
-    }
-    45%,55%
-    {
-        background-position: bottom;
-    }
+      background-position: top;
   }
-  .trailerextracurricular{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
-    background: rgba(0, 0, 0, 0.95);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  backdrop-filter: blur(20px);
-  visibility:hidden;
-  opacity: 0;
+  45%,55%
+  {
+      background-position: bottom;
   }
-  .trailerextracurricular .active{
-    visibility: visible;
-    opacity: 1;
-  }
-  .trailerextracurricular video{
-    max-width: 900px;
-    outline: none;
-  }
-  .trailerextracurricular .close{
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    max-width: 32px;
-  }
-  @media (max-width: 991px){  
-  
-  .bannerextracurricular{
-    padding: 100px 50px;
-  }
-  .bannerextracurricular .contentextracurricular h2{
-    font-weight: 400;
-    font-size: 2em;
-    letter-spacing: 0.05em;
-  }
-  .bannerextracurricular .contentextracurricular p{
-    font-size: 1em;
-  }
-  .slideextracurricular{
-    position: relative;
-    bottom: initial;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .sci{
-    position: absolute;
-    top: initial;
-    right: initial;
-    margin-top: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  .sci li{
-    list-style: none;
-    margin: 0 5px;
-  }
-  .trailerextracurricular video{
-    max-width: 90%;
-    outline: none;
-  }
-  }
-  /*extracurricular*/
-/*=========== TAILANDESAS ===========*/
-/*=============== DORAMAS ===============*/
+}
 
+@media (max-width: 991px){  
 
+.banner6{
+  padding: 100px 50px;
+}
+.banner6 .content6 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner6 .content6 p{
+  font-size: 1em;
+}
+.slide6{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== GOEDAM ====== */
 
+/* ====== INSPECTORA KO ====== */
+.banner7{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/PYs/fG60AnzllcdOzFTVcIjdPdEXejS.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner7 .content7{
+  max-width: 550px;
+}
+.banner7 .content7 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner7 .content7 h2 span{
+  font-weight: 800;
+}
+.banner7 .content p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide7{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/Inspector_Koo-jTBC-2021-03.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner7{
+  padding: 100px 50px;
+}
+.banner7 .content7 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner7 .content7 p{
+  font-size: 1em;
+}
+.slide7{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== INSPECTROA KO ====== */
+
+/* ====== THE HYPSNOSIS ====== */
+.banner8{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/PYs/largephoto1312191.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner8 .content8{
+  max-width: 550px;
+}
+.banner8 .content8 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner8 .content8 h2 span{
+  font-weight: 800;
+}
+.banner8 .content8 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide8{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/the\ hypnosis.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner8{
+  padding: 100px 50px;
+}
+.banner8 .content8 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner8 .content8 p{
+  font-size: 1em;
+}
+.slide8{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== THE HYPSNOSIS ====== */
+
+/* ====== LOKI ====== */
+.banner9{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/PYs/when-does-loki-take-place-in-the-mcu-timeline_6k3k.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner9 .content9{
+  max-width: 550px;
+}
+.banner9 .content9 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner9 .content9 h2 span{
+  font-weight: 800;
+}
+.banner9 .content9 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide9{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/loki.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner9{
+  padding: 100px 50px;
+}
+.banner9 .content9 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner9 .content9 p{
+  font-size: 1em;
+}
+.slide9{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== LOKI ====== */
+
+/* ====== PMLM ====== */
+.banner10{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/PYs/Why-women-kill1.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner10 .content10{
+  max-width: 550px;
+}
+.banner10 .content10 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner10 .content10 h2 span{
+  font-weight: 800;
+}
+.banner10 .content10 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide10{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/por-que-matan-las-mujeres-2-temporada-43945-c.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner10{
+  padding: 100px 50px;
+}
+.banner10 .content10 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner10 .content10 p{
+  font-size: 1em;
+}
+.slide10{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== PMLM ====== */
+
+/*--==================== SERIES Y PELICULAS ====================--*/
+
+/*--==================== DORAMAS ====================--*/
+
+/* ====== PENTHOUSE ====== */
+.banner11{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/Doramas/Coreanas/A4YHZSI42NFRLC7YEFJFIXDMPU.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner11 .content11{
+  max-width: 550px;
+}
+.banner11 .content11 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner11 .content11 h2 span{
+  font-weight: 800;
+}
+.banner11 .content11 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide11{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/pent.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner11{
+  padding: 100px 50px;
+}
+.banner11 .content11 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner11 .content11 p{
+  font-size: 1em;
+}
+.slide11{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== PENTHOUSE ====== */
+
+/* ====== VINCENZO ====== */
+.banner12{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/Doramas/Coreanas/a4579ea6365349d566aa0340aedcb821.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner12 .content12{
+  max-width: 550px;
+}
+.banner12 .content12 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner12 .content12 h2 span{
+  font-weight: 800;
+}
+.banner12 .content12 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide12{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/vin.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner12{
+  padding: 100px 50px;
+}
+.banner12 .content12 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner12 .content12 p{
+  font-size: 1em;
+}
+.slide12{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== VINCENZO ====== */
+
+/* ====== EBNEB ====== */
+.banner13{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/Doramas/Coreanas/AAAABaKEVWpiXGDIJRYAq3Pv-uxgnvFHpwHfCpytFXeehmUAIRUVRy6F9THFh_vXR39Q83QU767CDn01rlDJPxytPRzrlPgk0xo6GYYcu4amWEj-UTh10aj8J-TOiiGkRQ.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner13 .content13{
+  max-width: 550px;
+}
+.banner13 .content13 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner13 .content13 h2 span{
+  font-weight: 800;
+}
+.banner13 .content13 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide13{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/esta\ bien\ no\ estar\ bien.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner13{
+  padding: 100px 50px;
+}
+.banner13 .content13 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner13 .content13 p{
+  font-size: 1em;
+}
+.slide13{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== EBNEB ====== */
+
+/* ====== EXTRACURRICULAR ====== */
+.banner14{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/Doramas/Coreanas/Extracurricular-netflix.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner14 .content14{
+  max-width: 550px;
+}
+.banner14 .content14 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner14 .content14 h2 span{
+  font-weight: 800;
+}
+.banner14 .content14 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide14{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/Eternals-Pelicula-Poster-Marvel-Studios-Afiche-Entradas-Preventa-Peru-819x1024.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner14{
+  padding: 100px 50px;
+}
+.banner14 .content14 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner14 .content14 p{
+  font-size: 1em;
+}
+.slide14{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== EXTRACURRICULAR ====== */
+
+/* ====== HYAM ====== */
+.banner15{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/Doramas/Coreanas/hola-y-adios-mama.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner15 .content15{
+  max-width: 550px;
+}
+.banner15 .content15 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner15 .content15 h2 span{
+  font-weight: 800;
+}
+.banner15 .content15 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide15{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/holamm.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner15{
+  padding: 100px 50px;
+}
+.banner15 .content15 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner15 .content15 p{
+  font-size: 1em;
+}
+.slide15{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== HYAM ====== */
+
+/* ====== HMA ====== */
+.banner16{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/Doramas/Coreanas/holo-mi-amor-netflix.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner16 .content16{
+  max-width: 550px;
+}
+.banner16 .content16 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner16 .content16 h2 span{
+  font-weight: 800;
+}
+.banner16 .content16 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide16{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/holo.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner16{
+  padding: 100px 50px;
+}
+.banner16 .content16 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner16 .content16 p{
+  font-size: 1em;
+}
+.slide16{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== HMA ====== */
+
+/* ====== DULCE HOGAR ====== */
+.banner17{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/Doramas/Coreanas/Sweet\ Home\ 00.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner17 .content17{
+  max-width: 550px;
+}
+.banner17 .content17 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner17 .content17 h2 span{
+  font-weight: 800;
+}
+.banner17 .content17 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide17{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/ZRHQ5CEZWZCB5NEOXQRJMJPC7U.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner17{
+  padding: 100px 50px;
+}
+.banner17 .content17 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner17 .content17 p{
+  font-size: 1em;
+}
+.slide17{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== DUCLE HOGAR ====== */
+/*--==================== DORAMAS ====================--*/
+
+/*--==================== ANIMACION ====================--*/
+
+/* ====== ARCANE ====== */
+.banner18{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/Animacion/Captura\ de\ pantalla\ 2021-12-11\ 183804.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner18 .content18{
+  max-width: 550px;
+}
+.banner18 .content18 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner18 .content18 h2 span{
+  font-weight: 800;
+}
+.banner18 .content18 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide18{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/Arcane_-_Poster.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner18{
+  padding: 100px 50px;
+}
+.banner18 .content18 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner18 .content18 p{
+  font-size: 1em;
+}
+.slide18{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== ARCANE ====== */
+
+/* ====== DESENCANTO ====== */
+.banner19{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/Animacion/1535719781531.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner19 .content19{
+  max-width: 550px;
+}
+.banner19 .content191 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner19 .content19 h2 span{
+  font-weight: 800;
+}
+.banner19 .content19 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide19{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/6f8cd2ff0f9ea69d6e2736b0111f1fb6.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner19{
+  padding: 100px 50px;
+}
+.banner19 .content19 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner19 .content19 p{
+  font-size: 1em;
+}
+.slide19{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== DESENCANTO ====== */
+
+/* ====== TMG ====== */
+.banner20{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/Animacion/AAAABfmMXAlCl7V53c0XLIF74E0AbbXUdAvzQJNS-64YxMrJM_QoZODYMyeVqZEmGyNAg4dYuyxBQZ6-UCdUgVALDJ3Wh0_k.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner20 .content20{
+  max-width: 550px;
+}
+.banner20 .content20 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner20 .content20 h2 span{
+  font-weight: 800;
+}
+.banner20 .content20 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide20{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/tta.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner20{
+  padding: 100px 50px;
+}
+.banner20 .content20 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner20 .content20 p{
+  font-size: 1em;
+}
+.slide20{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== TMG ====== */
+
+/* ====== RAM ====== */
+.banner21{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/Animacion/Rick-Morty-Sexta-Temporada.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner21 .content21{
+  max-width: 550px;
+}
+.banner21 .content21 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner21 .content21 h2 span{
+  font-weight: 800;
+}
+.banner21 .content21 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide21{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/rick.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner21{
+  padding: 100px 50px;
+}
+.banner21 .content21 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner21 .content21 p{
+  font-size: 1em;
+}
+.slide21{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== RAM ====== */
+
+/* ====== TTE ====== */
+.banner22{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/Fondos/Animacion/saga-of-tanya-the-evil-1024x640.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner22 .content22{
+  max-width: 550px;
+}
+.banner2 .content22 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner22 .content22 h2 span{
+  font-weight: 800;
+}
+.banner22 .content22 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide22{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/Poster/1624287728_817_Una-gran-noticia-para-Tanya-the-Evil.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner22{
+  padding: 100px 50px;
+}
+.banner22 .content22 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner2 .content22 p{
+  font-size: 1em;
+}
+.slide22{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== TTE ====== */
+
+/*--==================== ANIMACION ====================--*/
 
 /*contacto*/
 .contact-section{
@@ -6657,6 +3768,101 @@ textarea.contact-form-text{
 
 .subscribe__input::placeholder {
   color: var(--text-color);
+}
+
+/* Show scroll */
+.show-scroll {
+  bottom: 5rem;
+}
+
+/*=============== FOOTER ===============*/
+.footer__container {
+  row-gap: 5rem;
+}
+
+.footer__content {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  row-gap: 2rem;
+}
+
+.footer__title, 
+.footer__subtitle {
+  font-size: var(--h3-font-size);
+}
+
+.footer__title {
+  margin-bottom: var(--mb-0-5);
+}
+
+.footer__description {
+  margin-bottom: var(--mb-2);
+}
+
+.footer__social {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: var(--mb-1-25);
+}
+
+.footer__subtitle {
+  margin-bottom: var(--mb-1);
+}
+
+.footer__item {
+  margin-bottom: var(--mb-0-75);
+}
+
+.footer__link {
+  color: var(--text-color);
+}
+
+.footer__link:hover {
+  color: var(--title-color);
+}
+
+.footer__rights {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  text-align: center;
+}
+
+.footer__copy, .footer__terms-link {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.footer__terms {
+  display: flex;
+  column-gap: 1.5rem;
+  justify-content: center;
+}
+
+.footer__terms-link:hover {
+  color: var(--text-color);
+}
+
+/*========== SCROLL UP ==========*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: var(--first-color);
+  padding: .5rem;
+  display: flex;
+  opacity: .9;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+}
+
+.scrollup:hover {
+  background-color: var(--first-color-alt);
+  opacity: 1;
+}
+
+.scrollup__icon {
+  color: var(--white-color);
+  font-size: 1.2rem;
 }
 
 /* Show scroll */
