@@ -1,0 +1,4125 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  /*Green dark 190 - Green 171 - Grren Blue 200*/
+  --hue-color: 190;
+
+  /* HSL color mode */
+  --first-color: hsl(var(--hue-color), 64%, 22%);
+  --first-color-second: hsl(var(--hue-color), 64%, 22%);
+  --first-color-alt: hsl(var(--hue-color), 64%, 15%);
+  --title-color: hsl(var(--hue-color), 64%, 18%);
+  --text-color: hsl(var(--hue-color), 24%, 35%);
+  --text-color-light: hsl(var(--hue-color), 8%, 60%);
+  --input-color: hsl(var(--hue-color), 24%, 97%);
+  --body-color: hsl(var(--hue-color), 100%, 99%);
+  --white-color: #FFF;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Open Sans', sans-serif;
+  --title-font: 'Raleway', sans-serif;
+  --biggest-font-size: 2.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes Bottom ==========*/
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-25: 1.25rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+  /*========== Hover overlay ==========*/
+  --img-transition: .3s;
+  --img-hidden: hidden;
+  --img-scale: scale(1.1);
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-family: var(--title-font);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input {
+  border: none;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+.main {
+  overflow-x: hidden;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+  padding: 4.5rem 0 2.5rem;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: var(--mb-2);
+}
+
+.container {
+  max-width: 968px;
+  margin-left: var(--mb-1);
+  margin-right: var(--mb-1);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/*=============== HEADER ===============*/
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: transparent;
+}
+
+/*=============== NAV ===============*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo, .nav__toggle {
+  color: var(--white-color);
+}
+
+.nav__logo {
+  font-weight: var(--font-semi-bold);
+}
+
+.nav__toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nav__menu {
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    background-color: var(--body-color);
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
+    padding: 3rem;
+    transition: .4s;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.nav__link {
+  color: var(--text-color-light);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  color: var(--text-color);
+}
+
+.nav__close {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+/* show menu */
+.show-menu {
+  right: 0;
+}
+
+/* Change background header */
+.scroll-header {
+  background-color: var(--body-color);
+  box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
+}
+
+.scroll-header .nav__logo,
+.scroll-header .nav__toggle {
+  color: var(--title-color);
+}
+
+/* Active link */
+.active-link {
+  position: relative;
+  color: var(--title-color);
+}
+
+.active-link::before {
+  content: '';
+  position: absolute;
+  background-color: var(--title-color);
+  width: 100%;
+  height: 2px;
+  bottom: -.75rem;
+  left: 0;
+}
+
+/*=============== HOME ===============*/
+.home__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 83%;
+}
+
+.home__container {
+  position: relative;
+  height: calc(100vh - var(--header-height));
+  align-content: center;
+  row-gap: 3rem;
+}
+
+.home__data-subtitle, 
+.home__data-title, 
+.home__social-link, 
+.home__info {
+  color: var(--white-color);
+}
+
+.home__data-subtitle {
+  display: block;
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-0-75);
+}
+
+.home__data-title {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-2-5);
+}
+
+.home__social {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.home__social-link {
+  font-size: 1.2rem;
+  width: max-content;
+}
+
+.home__info {
+  background-color: var(--first-color);
+  display: flex;
+  padding: 1.5rem 1rem;
+  align-items: center;
+  column-gap: .5rem;
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  width: 228px;
+}
+
+.home__info-title {
+  display: block;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-0-75);
+}
+
+.home__info-button {
+  font-size: var(--smaller-font-size);
+}
+
+.home__info-overlay {
+  overflow: var(--img-hidden);
+}
+
+.home__info-img {
+  width: 145px;
+  transition: var(--img-transition);
+}
+
+.home__info-img:hover {
+  transform: var(--img-scale);
+}
+
+/*=============== BUTTONS ===============*/
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  padding: 1rem 2rem;
+  font-weight: var(--font-semi-bold);
+  transition: .3s;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.button--flex {
+  display: flex;
+  align-items: center;
+  column-gap: .25rem;
+}
+
+.button--link {
+  background: none;
+  padding: 0;
+}
+
+.button--link:hover {
+  background: none;
+}
+
+/*=============== ABOUT ===============*/
+.about__data {
+  text-align: center;
+}
+
+.about__container {
+  row-gap: 2.5rem;
+}
+
+.about__description {
+  margin-bottom: var(--mb-2);
+}
+
+.about__img {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__img-overlay {
+  overflow: var(--img-hidden);
+}
+
+.about__img-one {
+  width: 130px;
+}
+
+.about__img-two {
+  width: 180px;
+}
+
+.about__img-one, 
+.about__img-two {
+  transition: var(--img-transition);
+}
+
+.about__img-one:hover, 
+.about__img-two:hover {
+  transform: var(--img-scale);
+}
+
+/*=============== DISCOVER ===============*/
+.discover__card {
+  position: relative;
+  width: 200px;
+  overflow: var(--img-hidden);
+}
+
+.discover__data {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+}
+
+.discover__title, 
+.discover__description {
+  color: var(--white-color);
+}
+
+.discover__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-25);
+}
+
+.discover__description {
+  display: block;
+  font-size: var(--smaller-font-size);
+}
+
+.discover__img {
+  transition: var(--img-transition);
+}
+
+.discover__img:hover {
+  transform: var(--img-scale);
+}
+
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+/*=============== EXPERIENCE ===============*/
+.experience__container {
+  row-gap: 2.5rem;
+  justify-content: center;
+  justify-items: center;
+}
+
+.experience__content {
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+  justify-items: center;
+  padding: 0 2rem;
+}
+
+.experience__number {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-0-5);
+}
+
+.experience__description {
+  font-size: var(--small-font-size);
+}
+
+.experience__img {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.experience__img-one, 
+.experience__img-two {
+  transition: var(--img-transition);
+}
+
+.experience__img-one:hover, 
+.experience__img-two:hover {
+  transform: var(--img-scale);
+}
+
+.experience__overlay {
+  overflow: var(--img-hidden);
+}
+
+.experience__overlay:nth-child(1) {
+  width: 263px;
+  margin-right: 2rem;
+}
+
+.experience__overlay:nth-child(2) {
+  width: 120px;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+}
+
+/*=============== VIDEO ===============*/
+.video__container {
+  padding-bottom: 1rem;
+}
+
+.video__description {
+  text-align: center;
+  margin-bottom: var(--mb-2-5);
+}
+
+.video__content {
+  position: relative;
+}
+
+.video__button {
+  position: absolute;
+  right: 1rem;
+  bottom: -1rem;
+  padding: 1rem 1.5rem;
+}
+
+.video__button-icon {
+  font-size: 1.2rem;
+}
+
+/*=============== PLACES ===============*/
+.place__card, .place__img {
+  height: 230px;
+}
+
+.place__container {
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+}
+
+.place__card {
+  position: relative;
+  overflow: var(--img-hidden);
+}
+
+.place__card:hover .place__img {
+  transform: var(--img-scale);
+}
+
+.place__img {
+  transition: var(--img-transition);
+}
+
+.place__content, .place__title {
+  color: var(--white-color);
+}
+
+.place__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: .75rem .75rem 1rem;
+}
+
+.place__rating {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+}
+
+.place__rating-icon {
+  font-size: .75rem;
+  margin-right: var(--mb-0-25);
+}
+
+.place__rating-number {
+  font-size: var(--small-font-size);
+}
+
+.place__subtitle, .place__price {
+  display: block;
+}
+
+.place__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-25);
+}
+
+.place__subtitle {
+  font-size: var(--smaller-font-size);
+  margin-bottom: var(--mb-1-25);
+}
+
+.place__button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: .75rem 1rem;
+}
+
+/*--==================== SERIES Y PELICULAS ====================--*/
+
+/* ====== JOKER ====== */
+.banner{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/PYs/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner .content{
+  max-width: 550px;
+}
+.banner .content h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner .content h2 span{
+  font-weight: 800;
+}
+.banner .content p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/joker.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner{
+  padding: 100px 50px;
+}
+.banner .content h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner .content p{
+  font-size: 1em;
+}
+.slide{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== JOKER ====== */
+
+/* ====== AQUAMAN ====== */
+.banner1{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/PYs/aquaman.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner1 .content1{
+  max-width: 550px;
+}
+.banner1 .content1 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner1 .content1 h2 span{
+  font-weight: 800;
+}
+.banner1 .content1 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide1{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/71SngnQD70L._AC_SY679_.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner1{
+  padding: 100px 50px;
+}
+.banner1 .content1 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner1 .content1 p{
+  font-size: 1em;
+}
+.slide1{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== AQUAMAN ====== */
+
+/* ====== EUPHORIA ====== */
+.banner2{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/PYs/4dc23d8dadeb4f2f9a434b76ae1d88d1.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner2 .content2{
+  max-width: 550px;
+}
+.banner2 .content2 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner2 .content2 h2 span{
+  font-weight: 800;
+}
+.banner2 .content2 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide2{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/4123858.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner2{
+  padding: 100px 50px;
+}
+.banner2 .content2 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner2 .content2 p{
+  font-size: 1em;
+}
+.slide2{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== EUPHORIA ====== */
+
+/* ====== MPD ====== */
+.banner3{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/PYs/9bf2b00ac4f4a79e5a986fd42e87890b9df3ce4ed8cf57ccc3fd048078a38ea3._UY500_UX667_RI_V_TTW_.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner3 .content3{
+  max-width: 550px;
+}
+.banner3 .content3 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner3 .content3 h2 span{
+  font-weight: 800;
+}
+.banner3 .content p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide3{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/the_gangster_the_cop_the_devil_poster.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner3{
+  padding: 100px 50px;
+}
+.banner3 .content3 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner3 .content3 p{
+  font-size: 1em;
+}
+.slide3{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== MPD ====== */
+
+/* ====== COBRA KAI ====== */
+.banner4{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/PYs/9f864d111465477.6002203db0b6b.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner4 .content4{
+  max-width: 550px;
+}
+.banner4 .content4 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner4 .content4 h2 span{
+  font-weight: 800;
+}
+.banner4 .content4 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide4{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/cobra.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner4{
+  padding: 100px 50px;
+}
+.banner4 .content4 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner4 .content4 p{
+  font-size: 1em;
+}
+.slide4{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== COBRA KAI ====== */
+
+/* ====== DR. STRANGE ====== */
+.banner5{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/PYs/db74a9133487437.61bee9d9b49c8\(1\).jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner5 .content5{
+  max-width: 550px;
+}
+.banner5 .content5 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner5 .content5 h2 span{
+  font-weight: 800;
+}
+.banner5 .content5 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide5{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/dr.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner5{
+  padding: 100px 50px;
+}
+.banner5 .content5 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner5 .content5 p{
+  font-size: 1em;
+}
+.slide5{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== DR. STRANGE ====== */
+
+/* ====== GOEDAM ====== */
+.banner6{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/PYs/Ef4OPJ0XYAE1nKF.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner6 .content6{
+  max-width: 550px;
+}
+.banner6 .content6 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner6 .content6 h2 span{
+  font-weight: 800;
+}
+.banner6 .content6 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide6{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/goedam-netflix-poster.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner6{
+  padding: 100px 50px;
+}
+.banner6 .content6 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner6 .content6 p{
+  font-size: 1em;
+}
+.slide6{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== GOEDAM ====== */
+
+/* ====== INSPECTORA KO ====== */
+.banner7{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/PYs/fG60AnzllcdOzFTVcIjdPdEXejS.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner7 .content7{
+  max-width: 550px;
+}
+.banner7 .content7 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner7 .content7 h2 span{
+  font-weight: 800;
+}
+.banner7 .content p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide7{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/Inspector_Koo-jTBC-2021-03.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner7{
+  padding: 100px 50px;
+}
+.banner7 .content7 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner7 .content7 p{
+  font-size: 1em;
+}
+.slide7{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== INSPECTROA KO ====== */
+
+/* ====== THE HYPSNOSIS ====== */
+.banner8{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/PYs/largephoto1312191.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner8 .content8{
+  max-width: 550px;
+}
+.banner8 .content8 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner8 .content8 h2 span{
+  font-weight: 800;
+}
+.banner8 .content8 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide8{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/the\ hypnosis.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner8{
+  padding: 100px 50px;
+}
+.banner8 .content8 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner8 .content8 p{
+  font-size: 1em;
+}
+.slide8{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== THE HYPSNOSIS ====== */
+
+/* ====== LOKI ====== */
+.banner9{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/PYs/when-does-loki-take-place-in-the-mcu-timeline_6k3k.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner9 .content9{
+  max-width: 550px;
+}
+.banner9 .content9 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner9 .content9 h2 span{
+  font-weight: 800;
+}
+.banner9 .content9 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide9{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/loki.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner9{
+  padding: 100px 50px;
+}
+.banner9 .content9 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner9 .content9 p{
+  font-size: 1em;
+}
+.slide9{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== LOKI ====== */
+
+/* ====== PMLM ====== */
+.banner10{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/PYs/Why-women-kill1.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner10 .content10{
+  max-width: 550px;
+}
+.banner10 .content10 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner10 .content10 h2 span{
+  font-weight: 800;
+}
+.banner10 .content10 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide10{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/por-que-matan-las-mujeres-2-temporada-43945-c.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner10{
+  padding: 100px 50px;
+}
+.banner10 .content10 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner10 .content10 p{
+  font-size: 1em;
+}
+.slide10{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== PMLM ====== */
+
+/*--==================== SERIES Y PELICULAS ====================--*/
+
+/*--==================== DORAMAS ====================--*/
+
+/* ====== PENTHOUSE ====== */
+.banner11{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/Doramas/Coreanas/A4YHZSI42NFRLC7YEFJFIXDMPU.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner11 .content11{
+  max-width: 550px;
+}
+.banner11 .content11 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner11 .content11 h2 span{
+  font-weight: 800;
+}
+.banner11 .content11 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide11{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/pent.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner11{
+  padding: 100px 50px;
+}
+.banner11 .content11 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner11 .content11 p{
+  font-size: 1em;
+}
+.slide11{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== PENTHOUSE ====== */
+
+/* ====== VINCENZO ====== */
+.banner12{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/Doramas/Coreanas/a4579ea6365349d566aa0340aedcb821.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner12 .content12{
+  max-width: 550px;
+}
+.banner12 .content12 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner12 .content12 h2 span{
+  font-weight: 800;
+}
+.banner12 .content12 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide12{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/vin.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner12{
+  padding: 100px 50px;
+}
+.banner12 .content12 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner12 .content12 p{
+  font-size: 1em;
+}
+.slide12{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== VINCENZO ====== */
+
+/* ====== EBNEB ====== */
+.banner13{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/Doramas/Coreanas/AAAABaKEVWpiXGDIJRYAq3Pv-uxgnvFHpwHfCpytFXeehmUAIRUVRy6F9THFh_vXR39Q83QU767CDn01rlDJPxytPRzrlPgk0xo6GYYcu4amWEj-UTh10aj8J-TOiiGkRQ.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner13 .content13{
+  max-width: 550px;
+}
+.banner13 .content13 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner13 .content13 h2 span{
+  font-weight: 800;
+}
+.banner13 .content13 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide13{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/esta\ bien\ no\ estar\ bien.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner13{
+  padding: 100px 50px;
+}
+.banner13 .content13 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner13 .content13 p{
+  font-size: 1em;
+}
+.slide13{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== EBNEB ====== */
+
+/* ====== EXTRACURRICULAR ====== */
+.banner14{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/Doramas/Coreanas/Extracurricular-netflix.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner14 .content14{
+  max-width: 550px;
+}
+.banner14 .content14 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner14 .content14 h2 span{
+  font-weight: 800;
+}
+.banner14 .content14 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide14{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/Eternals-Pelicula-Poster-Marvel-Studios-Afiche-Entradas-Preventa-Peru-819x1024.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner14{
+  padding: 100px 50px;
+}
+.banner14 .content14 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner14 .content14 p{
+  font-size: 1em;
+}
+.slide14{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== EXTRACURRICULAR ====== */
+
+/* ====== HYAM ====== */
+.banner15{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/Doramas/Coreanas/hola-y-adios-mama.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner15 .content15{
+  max-width: 550px;
+}
+.banner15 .content15 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner15 .content15 h2 span{
+  font-weight: 800;
+}
+.banner15 .content15 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide15{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/holamm.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner15{
+  padding: 100px 50px;
+}
+.banner15 .content15 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner15 .content15 p{
+  font-size: 1em;
+}
+.slide15{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== HYAM ====== */
+
+/* ====== HMA ====== */
+.banner16{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/Doramas/Coreanas/holo-mi-amor-netflix.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner16 .content16{
+  max-width: 550px;
+}
+.banner16 .content16 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner16 .content16 h2 span{
+  font-weight: 800;
+}
+.banner16 .content16 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide16{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/holo.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner16{
+  padding: 100px 50px;
+}
+.banner16 .content16 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner16 .content16 p{
+  font-size: 1em;
+}
+.slide16{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== HMA ====== */
+
+/* ====== DULCE HOGAR ====== */
+.banner17{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/Doramas/Coreanas/Sweet\ Home\ 00.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner17 .content17{
+  max-width: 550px;
+}
+.banner17 .content17 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner17 .content17 h2 span{
+  font-weight: 800;
+}
+.banner17 .content17 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide17{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/ZRHQ5CEZWZCB5NEOXQRJMJPC7U.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner17{
+  padding: 100px 50px;
+}
+.banner17 .content17 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner17 .content17 p{
+  font-size: 1em;
+}
+.slide17{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== DUCLE HOGAR ====== */
+/*--==================== DORAMAS ====================--*/
+
+/*--==================== ANIMACION ====================--*/
+
+/* ====== ARCANE ====== */
+.banner18{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/Animacion/Captura\ de\ pantalla\ 2021-12-11\ 183804.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner18 .content18{
+  max-width: 550px;
+}
+.banner18 .content18 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner18 .content18 h2 span{
+  font-weight: 800;
+}
+.banner18 .content18 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide18{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/Arcane_-_Poster.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner18{
+  padding: 100px 50px;
+}
+.banner18 .content18 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner18 .content18 p{
+  font-size: 1em;
+}
+.slide18{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== ARCANE ====== */
+
+/* ====== DESENCANTO ====== */
+.banner19{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/Animacion/1535719781531.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner19 .content19{
+  max-width: 550px;
+}
+.banner19 .content191 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner19 .content19 h2 span{
+  font-weight: 800;
+}
+.banner19 .content19 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide19{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/6f8cd2ff0f9ea69d6e2736b0111f1fb6.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner19{
+  padding: 100px 50px;
+}
+.banner19 .content19 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner19 .content19 p{
+  font-size: 1em;
+}
+.slide19{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== DESENCANTO ====== */
+
+/* ====== TMG ====== */
+.banner20{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/Animacion/AAAABfmMXAlCl7V53c0XLIF74E0AbbXUdAvzQJNS-64YxMrJM_QoZODYMyeVqZEmGyNAg4dYuyxBQZ6-UCdUgVALDJ3Wh0_k.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner20 .content20{
+  max-width: 550px;
+}
+.banner20 .content20 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner20 .content20 h2 span{
+  font-weight: 800;
+}
+.banner20 .content20 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide20{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/tta.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner20{
+  padding: 100px 50px;
+}
+.banner20 .content20 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner20 .content20 p{
+  font-size: 1em;
+}
+.slide20{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== TMG ====== */
+
+/* ====== RAM ====== */
+.banner21{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/Animacion/Rick-Morty-Sexta-Temporada.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner21 .content21{
+  max-width: 550px;
+}
+.banner21 .content21 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner21 .content21 h2 span{
+  font-weight: 800;
+}
+.banner21 .content21 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide21{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/rick.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner21{
+  padding: 100px 50px;
+}
+.banner21 .content21 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner21 .content21 p{
+  font-size: 1em;
+}
+.slide21{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== RAM ====== */
+
+/* ====== TTE ====== */
+.banner22{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(/Folders/img/fondos/Animacion/saga-of-tanya-the-evil-1024x640.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner22 .content22{
+  max-width: 550px;
+}
+.banner2 .content22 h2{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.banner22 .content22 h2 span{
+  font-weight: 800;
+}
+.banner22 .content22 p{
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+} 
+.play{
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+.play img{
+  margin-right: 10px;
+  max-width: 50px;
+}
+.sci{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a{
+  text-decoration: none;
+}
+.sci li a img{
+  filter: invert(1);
+  transform: scale(0.6);
+
+}
+.slide22{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 20px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(/Folders/img/poster/1624287728_817_Una-gran-noticia-para-Tanya-the-Evil.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+      background-position: top;
+  }
+  45%,55%
+  {
+      background-position: bottom;
+  }
+}
+
+@media (max-width: 991px){  
+
+.banner22{
+  padding: 100px 50px;
+}
+.banner22 .content22 h2{
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+}
+.banner2 .content22 p{
+  font-size: 1em;
+}
+.slide22{
+  position: relative;
+  bottom: initial;
+  left: 0;
+  width: 250px;
+  height: 150px;
+  margin: 20px 0;
+}
+.sci{
+  position: absolute;
+  top: initial;
+  right: initial;
+  margin-top: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.sci li{
+  list-style: none;
+  margin: 0 5px;
+}
+}
+/* ====== TTE ====== */
+
+/*--==================== ANIMACION ====================--*/
+
+/*contacto*/
+.contact-section{
+  background: url(/Folders/img/bg.png) no-repeat center;
+  background-size: cover;
+  padding: 40px 0;
+}
+.contact-section h1{
+  text-align: center;
+  color: #ddd;
+}
+.border{
+  width: 100px;
+  height: 10px;
+  background: #34495e;
+  margin: 40px auto;
+}
+
+.contact-form{
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.contact-form-text{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background: #111;
+  padding: 20px 40px;
+  outline: none;
+  color: #ddd;
+  transition: 0.5s;
+}
+.contact-form-text:focus{
+  box-shadow: 0 0 10px 4px #34495e;
+}
+textarea.contact-form-text{
+  resize: none;
+  height: 120px;
+}
+.contact-form-btn{
+  float: right;
+  border: 0;
+  background: #34495e;
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.contact-form-btn:hover{
+  background: #2980b9;
+}
+
+
+/*=============== SUBSCRIBE ===============*/
+.subscribe__bg {
+  background-color: var(--first-color-second);
+  padding: 2.5rem 0;
+}
+
+.subscribe__title, 
+.subscribe__description {
+  color: var(--white-color);
+}
+
+.subscribe__description {
+  text-align: center;
+  margin-bottom: var(--mb-2-5);
+}
+
+.subscribe__form {
+  background-color: var(--input-color);
+  padding: .5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subscribe__input {
+  width: 70%;
+  padding-right: .5rem;
+  background-color: var(--input-color);
+  color: var(--text-color);
+}
+
+.subscribe__input::placeholder {
+  color: var(--text-color);
+}
+
+/* Show scroll */
+.show-scroll {
+  bottom: 5rem;
+}
+
+/*=============== FOOTER ===============*/
+.footer__container {
+  row-gap: 5rem;
+}
+
+.footer__content {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  row-gap: 2rem;
+}
+
+.footer__title, 
+.footer__subtitle {
+  font-size: var(--h3-font-size);
+}
+
+.footer__title {
+  margin-bottom: var(--mb-0-5);
+}
+
+.footer__description {
+  margin-bottom: var(--mb-2);
+}
+
+.footer__social {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: var(--mb-1-25);
+}
+
+.footer__subtitle {
+  margin-bottom: var(--mb-1);
+}
+
+.footer__item {
+  margin-bottom: var(--mb-0-75);
+}
+
+.footer__link {
+  color: var(--text-color);
+}
+
+.footer__link:hover {
+  color: var(--title-color);
+}
+
+.footer__rights {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  text-align: center;
+}
+
+.footer__copy, .footer__terms-link {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.footer__terms {
+  display: flex;
+  column-gap: 1.5rem;
+  justify-content: center;
+}
+
+.footer__terms-link:hover {
+  color: var(--text-color);
+}
+
+/*========== SCROLL UP ==========*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: var(--first-color);
+  padding: .5rem;
+  display: flex;
+  opacity: .9;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+}
+
+.scrollup:hover {
+  background-color: var(--first-color-alt);
+  opacity: 1;
+}
+
+.scrollup__icon {
+  color: var(--white-color);
+  font-size: 1.2rem;
+}
+
+/* Show scroll */
+.show-scroll {
+  bottom: 5rem;
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: .60rem;
+  background-color: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-color-light);
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* Para dispositivos pequeños*/
+@media screen and (max-width: 340px) {
+  .place__container {
+    grid-template-columns: max-content;
+    justify-content: center;
+  }
+  .experience__content {
+    padding: 0;
+  }
+  .experience__overlay:nth-child(1) {
+    width: 190px;
+  }
+  .experience__overlay:nth-child(2) {
+    width: 80px;
+  }
+  .home__info {
+    width: 190px;
+    padding: 1rem;
+  }
+  .experience__img,
+  .video__container {
+    padding: 0;
+  }
+}
+
+/* Para dispositivos medianos */
+@media screen and (min-width: 568px) {
+  .video__container {
+    display: grid;
+    grid-template-columns: .6fr;
+    justify-content: center;
+  }
+  .place__container {
+    grid-template-columns: repeat(3, max-content);
+  }
+  .subscribe__form {
+    width: 470px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav__link {
+    color: var(--white-color);
+    text-transform: initial;
+  }
+  .nav__link:hover {
+    color: var(--white-color);
+  }
+  .nav__dark {
+    position: initial;
+  }
+  .nav__menu {
+    display: flex;
+    column-gap: 1rem;
+  }
+  .nav__list {
+    flex-direction: row;
+    column-gap: 4rem;
+  }
+  .nav__toggle, .nav__close {
+    display: none;
+  }
+  .change-theme-name {
+    display: none;
+  }
+  .change-theme {
+    color: var(--white-color);
+  }
+  .active-link::before {
+    background-color: var(--white-color);
+  }
+  .scroll-header .nav__link {
+    color: var(--text-color);
+  }
+  .scroll-header .active-link {
+    color: var(--title-color);
+  }
+  .scroll-header .active-link::before {
+    background-color: var(--title-color);
+  }
+  .scroll-header .change-theme {
+    color: var(--text-color);
+  }
+  .section {
+    padding: 7rem 0 2rem;
+  }
+  .home__container {
+    height: 100vh;
+    grid-template-rows: 1.8fr .5fr;
+  }
+  .home__data {
+    align-self: flex-end;
+  }
+  .home__social {
+    flex-direction: row;
+    align-self: flex-end;
+    margin-bottom: 3rem;
+    column-gap: 2.5rem;
+  }
+  .home__info {
+    bottom: 3rem;
+  }
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .about__data, .about__title {
+    text-align: initial;
+  }
+  .about__title {
+    margin-bottom: var(--mb-1-5);
+  }
+  .about__description {
+    margin-bottom: var(--mb-2);
+  }
+  .discover__container {
+    width: 610px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .discover__container,
+  .place__container {
+    padding-top: 2rem;
+  }
+  .experience__overlay:nth-child(1) {
+    width: 363px;
+    margin-right: 4rem;
+  }
+  .experience__overlay:nth-child(2) {
+    width: 160px;
+  }
+  .subscribe__bg {
+    background: none;
+    padding: 0;
+  }
+  .subscribe__container {
+    background-color: var(--first-color-second);
+    padding: 3.5rem 0;
+  }
+  .subscribe__input {
+    padding: 0 .5rem;
+  }
+  .footer__rights {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Para dispositivos grandes */
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home__container {
+    grid-template-rows: 2fr .5fr;
+  }
+  .home__info {
+    width: 328px;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+  }
+  .home__info-title {
+    font-size: var(--normal-font-size);
+  }
+  .home__info-img {
+    width: 240px;
+  }
+  .about__img-one {
+    width: 230px;
+  }
+  .about__img-two {
+    width: 290px;
+  }
+  .discover__card {
+    width: 237px;
+  }
+  .discover__container {
+    width: 700px;
+  }
+  .discover__data {
+    left: 1.5rem;
+    bottom: 2rem;
+  }
+  .discover__title {
+    font-size: var(--h2-font-size);
+  }
+  .experience__content {
+    margin: var(--mb-1) 0;
+    column-gap: 3.5rem;
+  }
+  .experience__overlay:nth-child(1) {
+    width: 463px;
+    margin-right: 7rem;
+  }
+  .experience__overlay:nth-child(2) {
+    width: 220px;
+    top: 3rem;
+  }
+  .video__container {
+    grid-template-columns: .7fr;
+  }
+  .video__description {
+    padding: 0 8rem;
+  }
+  .place__container {
+    gap: 3rem 2rem;
+  }
+  .place__card, .place__img {
+    height: 263px;
+  }
+  .footer__content {
+    justify-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* Para pantallas altas en móviles y escritorio*/
+@media screen and (min-height: 721px) {
+  body {
+    margin: 0;
+  }
+  .home__container, .home__img {
+    height: 640px;
+  }
+}
