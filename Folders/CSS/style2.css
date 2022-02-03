@@ -131,8 +131,8 @@ section {
   margin-top: 9rem;
   width: 90%;
   border-radius: 1rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgba(17, 17, 17, 0.7))), url(../images/home-bg.jpg) no-repeat;
-  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(../IMG/poridentidad.jpg) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgba(17, 17, 17, 0.7))), url(../img/home-bg.jpg) no-repeat;
+  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(../img/poridentidad.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   display: -webkit-box;
@@ -297,8 +297,8 @@ section {
 .destination .box-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(27rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  -ms-grid-columns: '(minmax(27rem, 1fr))[auto-fit]';
+      grid-template-columns: repeat'(auto-fit, minmax(27rem, 1fr))';
   gap: 1.5rem;
 }
 
@@ -359,8 +359,8 @@ section {
 .services .box-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  -ms-grid-columns: '(minmax(32rem, 1fr))[auto-fit]';
+      grid-template-columns: repeat'(auto-fit, minmax(32rem, 1fr))';
   gap: 1.5rem;
 }
 
@@ -521,8 +521,8 @@ section {
 .blogs .box-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  -ms-grid-columns: '(minmax(32rem, 1fr))[auto-fit]';
+      grid-template-columns: repeat'(auto-fit, minmax(32rem, 1fr))';
   gap: 1.5rem;
 }
 
@@ -629,8 +629,8 @@ section {
 .footer .box-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  -ms-grid-columns: '(minmax(25rem, 1fr))[auto-fit]';
+      grid-template-columns: repeat'(auto-fit, minmax(25rem, 1fr))';
   gap: 1.5rem;
 }
 
